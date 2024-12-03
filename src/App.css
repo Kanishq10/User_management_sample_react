@@ -1,0 +1,204 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif; /* Modern font */
+}
+
+#root {
+  margin: 0;
+}
+
+
+/* Global Styles */
+body {
+  background: linear-gradient(135deg, #f9f9f9, #eaeaea); 
+  color: #1a2b57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(90deg, #08b1cf, #001d5c); /* Gradient header */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 2.5rem; /* Larger for emphasis */
+  font-weight: bold;
+  color: #fff;
+  border-radius: px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  max-width: 1500px;
+  margin-top: 30px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft card shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-content:hover {
+  transform: translateY(-5px); /* Subtle lift */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Controls Section */
+.controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4285f4; /* Google-blue border */
+  box-shadow: 0 0 12px rgba(66, 133, 244, 0.4); /* Glow effect */
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-create {
+  background: linear-gradient(90deg, #00796b, #004d40); /* Gradient for create button */
+}
+
+.button-create:hover {
+  background: linear-gradient(90deg, #004d40, #002d27);
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.button-create:active {
+  transform: translateY(0);
+}
+
+/* Table Section */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.99rem;
+}
+
+.user-table th,
+.user-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0; /* Lighter border */
+}
+
+.user-table th {
+  background: #f4f4f4; /* Neutral table header */
+  color: #555;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-table tr {
+  transition: background 0.3s ease;
+}
+
+.user-table tr:hover {
+  background: #f9f9f9; /* Slightly darker hover effect */
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Hidden State */
+.hidden {
+  display: none;
+}
+
+/* Buttons in Table */
+.button-edit {
+  background: linear-gradient(90deg, #ffa726, #fb8c00); /* Gradient for edit */
+}
+
+.button-edit:hover {
+  background: linear-gradient(90deg, #fb8c00, #e65100);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-delete {
+  background: linear-gradient(90deg, #e57373, #d32f2f); /* Gradient for delete */
+  margin-left: 10px;
+}
+
+.button-delete:hover {
+  background: linear-gradient(90deg, #ef5350, #c62828);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header-title {
+    font-size: 1.8rem; /* Smaller header title */
+  }
+
+  .controls-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    margin-bottom: 15px;
+    width: 90%;
+  }
+
+  .button-create {
+    width: 90%;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 12px;
+  }
+}
